@@ -24,14 +24,20 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.tsserver.setup({})
+			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.tsserver.setup({
+				capabilities = capabilities,
+			})
 			local util = require("lspconfig.util")
 			lspconfig.gopls.setup({
 				cmd = { "gopls" },
 				filetypes = { "go", "gomod", "gowork", "gotmpl" },
 				root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+				capabilities = capabilities,
 				settings = {
 					gopls = {
 						completeUnimported = true,
