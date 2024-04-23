@@ -24,5 +24,21 @@ return {
 			subdir = "templates/nvim",
 		},
 		disable_frontmatter = true,
+		vim.keymap.set("n", "<leader>t", ":ObsidianTemplate<CR>"),
+		vim.keymap.set("n", "<leader>c", ":ObsidianToggleCheckbox<CR>"),
+		vim.keymap.set("n", "<leader>a", ":ObsidianToday<CR>"),
+		daily_notes = {
+			-- Optional, if you keep daily notes in a separate directory.
+			folder = "daily notes",
+			-- Optional, if you want to change the date format for the ID of daily notes.
+			date_format = "%Y-%m-%d",
+			-- Optional, if you want to change the date format of the default alias of daily notes.
+			alias_format = "%B %-d, %Y",
+			-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+			template = "templates/daily.md",
+		},
+		ui = {
+			enable = false,
+		},
 	},
 }
