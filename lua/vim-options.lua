@@ -4,6 +4,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
+vim.cmd("set conceallevel=1")
 vim.g.mapleader = " "
 
 -- Navigate vim panes better

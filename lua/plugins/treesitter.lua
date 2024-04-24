@@ -14,6 +14,8 @@ return {
 				"heex",
 				"javascript",
 				"html",
+				"markdown",
+				"markdown_inline",
 			},
 			sync_install = false,
 			highlight = { enable = true },
