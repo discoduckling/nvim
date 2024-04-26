@@ -38,6 +38,27 @@ return {
 			nvim_cmp = true,
 			min_chars = 2,
 		},
+		---@param url string
+		follow_url_func = function(url)
+			-- Open the URL in the default web browser.
+			vim.fn.jobstart({ "open", url }) -- Mac OS
+			-- vim.fn.jobstart({"xdg-open", url})  -- linux
+		end,
+		-- Optional, set to true to force ':ObsidianOpen' to bring the app to the foreground.
+		open_app_foreground = false,
+
+		picker = {
+			-- Set your preferred picker. Can be one of 'telescope.nvim', 'fzf-lua', or 'mini.pick'.
+			name = "telescope.nvim",
+			-- Optional, configure key mappings for the picker. These are the defaults.
+			-- Not all pickers support all mappings.
+			mappings = {
+				-- Create a new note from your query.
+				new = "<C-x>",
+				-- Insert a link to the selected note.
+				insert_link = "<C-l>",
+			},
+		},
 		ui = {
 			enable = true,
 			update_debounce = 200,
