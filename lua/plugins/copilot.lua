@@ -41,7 +41,8 @@ return {
 				cvs = false,
 				typescript = true,
 				javascript = true,
-				go = true,
+				go = false,
+				tmpl = true,
 				["."] = false,
 			},
 			copilot_node_command = "node", -- Node.js version must be > 18.x

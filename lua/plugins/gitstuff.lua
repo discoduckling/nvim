@@ -9,7 +9,8 @@ return {
 			vim.keymap.set("n", "<leader>gx", ":Gitsigns reset_hunk<CR>", {})
 		end,
 	},
-	{ "tpope/vim-fugitive" },
+	-- { "tpope/vim-fugitive" },
+	{ "akinsho/git-conflict.nvim", version = "*", config = true },
 	{
 		"kdheepak/lazygit.nvim",
 		cmd = {

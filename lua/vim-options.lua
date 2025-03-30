@@ -5,6 +5,8 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set conceallevel=1")
+vim.cmd("set clipboard+=unnamedplus")
+
 vim.g.mapleader = " "
 
 -- Navigate vim panes better
@@ -17,3 +19,5 @@ vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
+-- git blame
+vim.keymap.set("n", "<space>gu", ":GitBlameOpenCommitURL<CR>")
